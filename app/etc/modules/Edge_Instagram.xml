@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Edge_Instagram>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Core/>
+                <Mage_Adminhtml/>
+            </depends>
+        </Edge_Instagram>
+    </modules>
+</config>

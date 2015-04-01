@@ -1,0 +1,21 @@
+{
+    "name": "outeredge/edge-magento-module-instagram",
+    "type": "magento-module",
+    "description": "Instagram Module by outer/edge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "outer/edge",
+            "email": "support@outeredgeuk.com"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "map": [
+            ["app/code/local/Edge/Instagram", "app/code/local/Edge/Instagram"],
+            ["app/etc/modules/Edge_Instagram.xml", "app/etc/modules/Edge_Instagram.xml"]
+        ]
+    }
+}

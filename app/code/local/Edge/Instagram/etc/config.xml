@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Edge_Instagram>
+            <version>1.0.0</version>
+        </Edge_Instagram>
+    </modules>
+    <global>
+        <helpers>
+            <instagram>
+                <class>Edge_Instagram_Helper</class>
+            </instagram>
+        </helpers>
+    </global>
+    <default>
+        <instagram>
+            <api>
+                <url>https://api.instagram.com/v1/</url>
+            </api>
+        </instagram>
+    </default>
+</config>
