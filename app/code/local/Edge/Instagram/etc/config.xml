@@ -6,6 +6,11 @@
         </Edge_Instagram>
     </modules>
     <global>
+        <blocks>
+            <instagram>
+                <class>Edge_Instagram_Block</class>
+            </instagram>
+        </blocks>
         <helpers>
             <instagram>
                 <class>Edge_Instagram_Helper</class>
