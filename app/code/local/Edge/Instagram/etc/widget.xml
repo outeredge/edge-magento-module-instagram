@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<widgets>
+    <instagram_gallery type="instagram/gallery" translate="name description" module="instagram">
+        <name>Instagram Gallery</name>
+        <description>Adds a gallery of Instagram images</description>
+        <parameters>
+            <title>
+                <label>Title</label>
+                <type>text</type>
+                <visible>1</visible>
+                <required>1</required>
+            </title>
+            <description>
+                <label>Description</label>
+                <type>textarea</type>
+                <visible>1</visible>
+                <required>0</required>
+            </description>
+            <limit>
+                <label>Limit</label>
+                <type>text</type>
+                <visible>1</visible>
+                <required>1</required>
+            </limit>
+            <hashtag>
+                <label>Hashtag</label>
+                <type>text</type>
+                <visible>1</visible>
+                <required>1</required>
+            </hashtag>
+        </parameters>
+    </instagram_gallery>
+</widgets>

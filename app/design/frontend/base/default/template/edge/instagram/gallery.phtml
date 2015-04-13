@@ -1,0 +1,36 @@
+<div class="instagram-gallery">
+    <p class="title"><?php echo $this->getTitle() ?></p>
+    <?php if ($this->getDescription()): ?>
+        <p class="description"><?php echo nl2br($this->getDescription()) ?></p>
+    <?php endif; ?>
+    <div id="instagram-<?php echo $this->getHashtag() ?>" class="images" data-url="<?php echo Mage::getStoreConfig('instagram/api/url') . 'tags/' . $this->getHashtag() . '/media/recent?client_id=' . Mage::getStoreConfig('instagram/api/client_id') . '&count=' . $this->getLimit() ?>"></div>
+</div>
+<script>
+    // Instagram Gallery
+    var gallery = document.getElementById('instagram-<?php echo $this->getHashtag() ?>');
+
+    function instagramImages(response){
+        for(i=0; i<response.data.length; i++){
+            insertImage(response.data[i]);
+        }
+    }
+
+    function insertImage(data){
+        var link = document.createElement('a');
+        link.setAttribute('href', data.link);
+        link.setAttribute('title', data.caption.text);
+
+        var image = document.createElement('img');
+        image.onload = function(){
+            link.setAttribute('class', 'loaded');
+        };
+        image.setAttribute('src', data.images.low_resolution.url);
+
+        link.appendChild(image);
+        gallery.appendChild(link);
+    }
+
+    var script = document.createElement('script');
+    script.src = gallery.getAttribute('data-url') + '&callback=instagramImages';
+    document.body.appendChild(script);
+</script>
