@@ -16,18 +16,20 @@
     }
 
     function insertImage(data){
+        var div = document.createElement('div');
         var link = document.createElement('a');
         link.setAttribute('href', data.link);
         link.setAttribute('title', data.caption.text);
 
         var image = document.createElement('img');
         image.onload = function(){
-            link.setAttribute('class', 'loaded');
+            div.setAttribute('class', 'loaded');
         };
         image.setAttribute('src', data.images.low_resolution.url);
 
+        div.appendChild(link);
         link.appendChild(image);
-        gallery.appendChild(link);
+        gallery.appendChild(div);
     }
 
     var script = document.createElement('script');
