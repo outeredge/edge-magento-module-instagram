@@ -20,6 +20,7 @@
         var link = document.createElement('a');
         link.setAttribute('href', data.link);
         link.setAttribute('title', data.caption.text);
+        link.setAttribute('target', '_blank');
 
         var image = document.createElement('img');
         image.onload = function(){
